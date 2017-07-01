@@ -213,15 +213,16 @@ for train_times in xrange(1,10):
 plt.figure(1)
 plt.subplot(211)
 plt.plot(data1["batchsize"], data1["loss"], 'b--')
-plt.xlabel('Minibatch number')
+plt.xlabel('Cycle')
 plt.ylabel('Loss')
-plt.title('Minibatch run vs. Training loss')
+plt.title('Train Cycle run vs. Training loss')
 plt.subplot(212)
 plt.plot(data1["batchsize"], data1["error"], 'r--')
-plt.xlabel('Minibatch number')
+plt.xlabel('Cycle number')
 plt.ylabel('Label Prediction Error')
-plt.title('Minibatch run vs. Label Prediction Error')
+plt.title('Train Cycle run vs. Label Prediction Error')
 plt.show()
+
 
 
 features=np.float32(testing_x)
