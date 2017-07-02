@@ -3,7 +3,7 @@ import numpy as np
 import sys
 import os
 import cntk as C
-import __future__, sys
+import __future__
 import urllib
 import zipfile
 import csv
