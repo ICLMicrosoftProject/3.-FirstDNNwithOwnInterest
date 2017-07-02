@@ -1,6 +1,9 @@
 # FirstDNNwithOwnData
 Introduce a fully connected DNN on own example dataset
 
+```
+python SpamDetectorFCDNN.py
+```
 
 ## Reference
 ## License
