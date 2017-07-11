@@ -160,17 +160,6 @@ def fully_connected_classifier_net(input_var, num_output_classes, hidden_layer_d
 z = fully_connected_classifier_net(input, num_output_classes, hidden_layers_dim, 
                                    num_hidden_layers, C.sigmoid)
 
-def create_model(features):
-    with C.layers.default_options(init=C.layers.glorot_uniform(), activation=C.sigmoid):
-        h = features
-        for _ in range(num_hidden_layers):
-            h = C.layers.Dense(hidden_layers_dim)(h)
-        last_layer = C.layers.Dense(num_output_classes, activation = None)
-        
-        return last_layer(h)
-        
-
-z = create_model(input)
 
 
 loss = C.cross_entropy_with_softmax(z, label)
